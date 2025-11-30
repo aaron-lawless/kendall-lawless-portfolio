@@ -5,7 +5,6 @@ import type { Project, ProjectTag } from './projects'
 import { AVAILABLE_TAGS, TAG_CONFIG } from './projects'
 
 export default function WorkGrid( { projects }: { projects: Project[] } ) {
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({})
   const [selectedTag, setSelectedTag] = useState<string>('All')
   const intervalsRef = useRef<{ [key: string]: any }>({})
@@ -23,7 +22,6 @@ export default function WorkGrid( { projects }: { projects: Project[] } ) {
   }, [projects, selectedTag])
 
   const handleMouseEnter = (projectId: string) => {
-    setHoveredProject(projectId)
     
     // Start rotating images
     const interval = setInterval(() => {
@@ -43,7 +41,6 @@ export default function WorkGrid( { projects }: { projects: Project[] } ) {
   }
 
   const handleMouseLeave = (projectId: string) => {
-    setHoveredProject(null)
     
     // Clear the specific interval for this project
     if (intervalsRef.current[projectId]) {

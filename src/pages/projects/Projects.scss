@@ -1,0 +1,29 @@
+.projects-page {
+  padding: 0 10rem;
+  min-height: 100vh;
+  margin-top: 6rem;
+}
+
+@media (max-width: 1400px) {
+  .projects-page {
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-page {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page {
+    padding: 0 1.5rem;
+  }
+}

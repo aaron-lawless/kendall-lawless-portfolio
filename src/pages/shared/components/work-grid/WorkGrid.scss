@@ -1,0 +1,240 @@
+@use '../../../../styles/variables' as *;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+.work-grid-title {
+  font-family: serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #1a1a1a;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  font-weight: 550;
+}
+
+.work-grid-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.filter-tag {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-text;
+  background-color: transparent;
+  border: 1px solid rgba(26, 26, 26, 0.2);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background-color: rgba(107, 31, 43, 0.05);
+    border-color: #6B1F2B;
+  }
+
+  &.active {
+    background-color: #6B1F2B;
+    color: #f5f1e8;
+    border-color: #6B1F2B;
+  }
+}
+
+.work-grid-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  padding: 4rem 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.work-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  gap: 1.5rem;
+}
+
+.work-item-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #1a1a1a;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.work-item-title {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: $color-text;
+  margin: 0;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+   text-transform: uppercase;
+}
+
+.work-item-subtitle {
+  font-size: 1rem;
+  color: $color-text;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.8;
+  color: #1a1a1a;
+   text-transform: uppercase;
+}
+
+.work-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+   text-transform: uppercase;
+}
+
+.work-item-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #6B1F2B;
+  background-color: rgba(107, 31, 43, 0.08);
+  padding: 0.4rem 1rem;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.work-item-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f5f1e8;
+  cursor: none;
+
+  &::after {
+    content: 'View Project';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    background-color: #f5f1e8;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+// Responsive breakpoints
+@media (max-width: 1024px) {
+  .work-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .work-item-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+
+  .work-grid-filters {
+    gap: 0.75rem;
+  }
+
+  .filter-tag {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+    color: #1a1a1a;
+  }
+
+  .work-item {
+    padding: 3rem 0;
+    gap: 1.5rem;
+  }
+
+  .work-item-title {
+    font-size: 2rem;
+  }
+
+  .work-item-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-grid {
+    padding: 2rem 0;
+  }
+
+  .work-grid-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-tag {
+    padding: 0.35rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .work-item {
+    padding: 2rem 0;
+    gap: 1rem;
+  }
+
+  .work-item-title {
+    font-size: 1.75rem;
+  }
+}

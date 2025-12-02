@@ -35,8 +35,8 @@ export default function HeroHeader() {
       <div className="hero-content">
         <div className="hero-left">
           <h1 className="hero-title">
-            MADE <br />
-            WITHOUT LIMITS.
+            <span className="hero-title-line-1">Made</span>
+            <span className="hero-title-line-2">Without Limits</span>
           </h1>
           <button 
             className="hero-button view-work-button"
@@ -47,8 +47,7 @@ export default function HeroHeader() {
         </div>
         <div className="hero-right">
           <div className="hero-subtitle">
-            <p>Stealing people's attention</p>
-            <p>to show them what really matters</p>
+            <p>Stealing people's attentionto show them what really matters</p>
           </div>
           <button 
             className="hero-button lets-talk-button"
@@ -68,14 +67,18 @@ export default function HeroHeader() {
         </div>
         <div className="color-block-red">
           <div className="red-block-content">
-            <h2 className="red-block-title">Yoo-Hoo! I'm Kendall</h2>
-            <p className="red-block-text">
-              Design, to me, is about intention. I'm driven by the challenge of creating
-              work that feels considered, honest, and genuinely crafted. Every project is
-              any opportunity to build something that reflects care and meaning - something
-              made with depth, not just decoration.
-            </p>
-            <button className="red-block-button">ABOUT ME +</button>
+            <div className="red-block-left">
+              <h2 className="red-block-title">Yoo-Hoo!<br /> I'm Kendall</h2>
+            </div>
+            <div className="red-block-right">
+              <p className="red-block-text">
+                Design, to me, is about intention. I'm driven by the challenge of creating
+                work that feels considered, honest, and genuinely crafted. Every project is
+                any opportunity to build something that reflects care and meaning - something
+                made with depth, not just decoration.
+              </p>
+              <button className="red-block-button">ABOUT ME +</button>
+            </div>
           </div>
         </div>
       </div>

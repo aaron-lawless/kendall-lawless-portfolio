@@ -1,6 +1,91 @@
 @use './reset';
+@use './variables' as *;
 
-// Add global utility classes if needed
+// Global utility classes
 .text-balance {
   text-wrap: balance;
+}
+
+// Responsive container utilities
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-mobile;
+  padding-right: $container-padding-mobile;
+
+  @media (min-width: $breakpoint-md) {
+    padding-left: $container-padding-tablet;
+    padding-right: $container-padding-tablet;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding-left: $container-padding-laptop;
+    padding-right: $container-padding-laptop;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    padding-left: $container-padding-desktop;
+    padding-right: $container-padding-desktop;
+  }
+}
+
+// Responsive visibility utilities
+.hidden-mobile {
+  @media (max-width: $breakpoint-md - 1px) {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @media (min-width: $breakpoint-lg) {
+    display: none !important;
+  }
+}
+
+.visible-mobile-only {
+  @media (min-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+// Responsive typography utilities
+.text-responsive {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.heading-responsive {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Base body styles
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Focus visible styles for accessibility
+*:focus-visible {
+  outline: 2px solid $color-accent;
+  outline-offset: 2px;
+}
+
+// Prevent horizontal scroll
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }

@@ -11,10 +11,10 @@ import {
 
 // Tag configuration with Tabler icons
 export const TAG_CONFIG = {
-  'Branding': { icon: IconBrandAdobe, label: 'Branding' },
-  'Package Design': { icon: IconShoppingCart, label: 'Package Design' },
-  'Illustration': { icon: IconPrinter, label: 'Illustration' },
-  'Social Impact Design': { icon: IconPlant, label: 'Social Impact Design' }
+  'Brand': { icon: IconBrandAdobe, label: 'Brand' },
+  'Packaging': { icon: IconShoppingCart, label: 'Packaging' },
+  'Motion': { icon: IconPrinter, label: 'Motion' },
+  'Print': { icon: IconPlant, label: 'Print' }
 } as const
 
 // Available tags that projects can use
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     id: 'super-natural',
     title: 'Super Natural',
     subtitle: 'COFFEE BRANDING & E-COMMERCE',
-    tags: ['Branding', 'Package Design', 'Illustration'],
+    tags: ['Brand', 'Packaging', 'Motion'],
     images: [
       img1,
       img2,
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     id: 'gilkf',
     title: 'Gilked',
     subtitle: 'FRESH BRAND IDENTITY FOR TAMPA CUSTOM HOME BUILDER.',
-    tags: ['Branding', 'Illustration'],
+    tags: ['Brand', 'Print'],
     images: [
       'https://images.unsplash.com/photo-1618556450994-a6a128ef0d9d?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',

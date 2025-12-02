@@ -4,7 +4,13 @@ import './WorkGrid.scss'
 import type { Project, ProjectTag } from './projects'
 import { AVAILABLE_TAGS, TAG_CONFIG } from './projects'
 
-export default function WorkGrid( { projects }: { projects: Project[] } ) {
+type WorkGridProps = {
+  projects: Project[]
+  showFilters?: boolean
+  showTitles?: boolean
+}
+
+export default function WorkGrid( { projects, showFilters = true, showTitles = true }: WorkGridProps ) {
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: string]: number }>({})
   const [selectedTag, setSelectedTag] = useState<string>('All')
   const intervalsRef = useRef<{ [key: string]: any }>({})
@@ -53,8 +59,8 @@ export default function WorkGrid( { projects }: { projects: Project[] } ) {
 
   return (
     <section className="work-grid">
-      <h1 className="work-grid-title">My Collection of Projects.</h1>
-      <div className="work-grid-filters">
+      {showTitles && <h1 className="work-grid-title">My Collection of Projects.</h1>}
+      {showFilters && <div className="work-grid-filters">
         {allTags.map(tag => {
           const TagIcon = tag !== 'All' ? TAG_CONFIG[tag as ProjectTag].icon : null;
           return (
@@ -68,8 +74,7 @@ export default function WorkGrid( { projects }: { projects: Project[] } ) {
             </button>
           );
         })}
-      </div>
-      
+      </div>}
       <div className="work-grid-items">
         {filteredProjects.map(project => (
           <div 

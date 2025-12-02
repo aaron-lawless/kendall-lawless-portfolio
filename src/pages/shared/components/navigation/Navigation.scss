@@ -8,28 +8,16 @@
   width: 100vw;
   max-width: none;
   padding: 2rem 0rem;
-  background: #f5f1e8;
+  background: #c6d2f4;
 }
 
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 1.5rem 0rem;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .nav-container {
     padding: 1.5rem 0rem;
   }
 }
 
 @media (max-width: 768px) {
-  .nav-container {
-    padding: 1.5rem 0rem;
-  }
-}
-
-@media (max-width: 480px) {
   .nav-container {
     padding: 1rem 0rem;
   }
@@ -41,20 +29,20 @@
   justify-content: space-between;
   width: 100%;
   gap: 2rem;
-  padding: 0 10rem;
+  padding: 0 3rem;
   max-width: 100%;
   box-sizing: border-box;
 }
 
 @media (max-width: 1400px) {
   .nav-content {
-    padding: 0 6rem;
+    padding: 0 3rem;
   }
 }
 
 @media (max-width: 1024px) {
   .nav-content {
-    padding: 0 4rem;
+    padding: 0 2.5rem;
     gap: 1.5rem;
   }
 }
@@ -69,17 +57,15 @@
 @media (max-width: 480px) {
   .nav-content {
     padding: 0 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
 /* Logo styling */
 .nav-logo {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #6B1F2B;
+  color: #381932;
   font-style: italic;
   text-transform: uppercase;
   flex-shrink: 0;
@@ -87,6 +73,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  z-index: 51;
   
   &:hover {
     opacity: 0.8;
@@ -95,21 +82,98 @@
 
 @media (max-width: 1024px) {
   .nav-logo {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .nav-logo {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
 @media (max-width: 480px) {
   .nav-logo {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 51;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 1.75rem;
+
+  span {
+    display: block;
     width: 100%;
-    text-align: center;
+    height: 2px;
+    background-color: #381932;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+  }
+}
+
+/* Navigation menu wrapper */
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .nav-menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #c6d2f4;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6rem 2rem 2rem;
+    gap: 3rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+
+    &.mobile-open {
+      right: 0;
+    }
   }
 }
 
@@ -117,12 +181,12 @@
 .nav-menu-list {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
   flex: 1 1 auto;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 @media (max-width: 1024px) {
@@ -133,23 +197,19 @@
 
 @media (max-width: 768px) {
   .nav-menu-list {
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-menu-list {
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
     width: 100%;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 }
 
 /* Navigation links */
 .nav-link {
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #6B1F2B;
+  color: #381932;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -163,14 +223,8 @@
 
 @media (max-width: 768px) {
   .nav-link {
-    font-size: 0.8125rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-link {
-    font-size: 0.75rem;
-    padding: 0.25rem 0;
+    font-size: 1.25rem;
+    padding: 0.875rem 0;
   }
 }
 
@@ -182,11 +236,10 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .theme-toggles {
     width: 100%;
-    justify-content: center;
-    order: -1;
+    justify-content: flex-start;
   }
 }
 
@@ -204,15 +257,10 @@
 }
 
 .theme-btn-dark {
-  background-color: #6B1F2B;
+  background-color: #381932;
 }
 
 .theme-btn-light {
   background-color: transparent;
-  border: 2px solid #6B1F2B;
-}
-
-.theme-btn-light {
-  background-color: transparent;
-  border: 2px solid #6B1F2B;
+  border: 2px solid #381932;
 }

@@ -100,7 +100,7 @@
 
   &:hover {
     background: #1a1a1a;
-    color: #f5f1e8;
+    color: #c6d2f4;
     transform: translateX(4px);
   }
 }
@@ -161,7 +161,7 @@
   transform: translateX(-50%);
   width: 100vw;
   height: 80vh;
-  background-color: #6B1F2B;
+  background-color: #381932;
   z-index: 1;
   top: 50%;
   margin-top: -20vh;
@@ -194,7 +194,7 @@
   display: flex;
   gap: 4rem;
   align-items: flex-start;
-  color: #f5f1e8;
+  color: #c6d2f4;
   padding: 0 8rem;
 }
 
@@ -270,7 +270,7 @@
   font-weight: 400;
   margin: 0;
   font-family: 'Georgia', 'Times New Roman', serif;
-  color: #f5f1e8;
+  color: #c6d2f4;
   line-height: 1.2;
 }
 
@@ -278,14 +278,14 @@
   font-size: clamp(0.9rem, 2vw, 1.4rem);
   line-height: 1.6;
   margin: 0;
-  color: #f5f1e8;
+  color: #c6d2f4;
   font-family: 'Montserrat', sans-serif;
 }
 
 .red-block-button {
   background: transparent;
-  border: 2px solid #f5f1e8;
-  color: #f5f1e8;
+  border: 2px solid #c6d2f4;
+  color: #c6d2f4;
   padding: 1rem 3rem;
   font-size: 1rem;
   font-weight: 600;
@@ -303,8 +303,8 @@
   align-self: start;
 
   &:hover {
-    background: #f5f1e8;
-    color: #6B1F2B;
+    background: #c6d2f4;
+    color: #381932;
     transform: translateX(4px);
   }
 }

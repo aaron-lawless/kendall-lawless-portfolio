@@ -10,7 +10,7 @@ export default function Portfolio() {
     <div className="portfolio-page">
       <Navigation/>
       <HeroHeader/>
-      <WorkGrid projects={projects}/>
+      <WorkGrid projects={projects} showFilters={false} showTitles={false}/>
     </div>
   )
 }

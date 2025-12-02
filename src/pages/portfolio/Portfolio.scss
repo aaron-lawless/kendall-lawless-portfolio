@@ -1,17 +1,18 @@
 .portfolio-page {
-  padding: 0 10rem;
+  padding: 0 3rem;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 @media (max-width: 1400px) {
   .portfolio-page {
-    padding: 0 6rem;
+    padding: 0 3rem;
   }
 }
 
 @media (max-width: 1024px) {
   .portfolio-page {
-    padding: 0 4rem;
+    padding: 0 2.5rem;
   }
 }
 

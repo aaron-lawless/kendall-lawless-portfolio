@@ -105,8 +105,8 @@
 
 .hero-button {
   background: transparent;
-  border: 2px solid #1a1a1a;
-  color: #1a1a1a;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
   padding: clamp(0.875rem, 2vw, 1rem) clamp(2rem, 4vw, 3rem);
   font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: 600;
@@ -124,8 +124,8 @@
   width: fit-content;
 
   &:hover {
-    background: #1a1a1a;
-    color: #c6d2f4;
+    background: var(--color-primary);
+    color: var(--color-bg);
     transform: translateX(4px);
   }
 }
@@ -179,7 +179,7 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background-color: #381932;
+  background-color: var(--color-primary);
   z-index: 1;
   display: flex;
   align-items: flex-start;
@@ -215,7 +215,7 @@
   display: flex;
   gap: 4rem;
   align-items: flex-start;
-  color: #c6d2f4;
+  color: var(--color-bg);
   padding: 0 clamp(2rem, 5vw, 8rem);
 }
 
@@ -286,7 +286,7 @@
   font-weight: 400;
   margin: 0;
   font-family: 'Georgia', 'Times New Roman', serif;
-  color: #c6d2f4;
+  color: var(--color-bg);
   line-height: 1.2;
 }
 
@@ -294,14 +294,14 @@
   font-size: clamp(0.9rem, 2vw, 1.4rem);
   line-height: 1.6;
   margin: 0;
-  color: #c6d2f4;
+  color: var(--color-bg);
   font-family: 'Montserrat', sans-serif;
 }
 
 .red-block-button {
   background: transparent;
-  border: 2px solid #c6d2f4;
-  color: #c6d2f4;
+  border: 2px solid var(--color-bg);
+  color: var(--color-bg);
   padding: clamp(0.875rem, 2vw, 1rem) clamp(2rem, 4vw, 3rem);
   font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: 600;
@@ -320,8 +320,8 @@
   align-self: flex-start;
 
   &:hover {
-    background: #c6d2f4;
-    color: #381932;
+    background: var(--color-bg);
+    color: var(--color-primary);
     transform: translateX(4px);
   }
 }
@@ -343,7 +343,7 @@
   font-size: clamp(7rem, 14vw, 10rem);
   font-weight: 400;
   line-height: 1;
-  color: #1a1a1a;
+  color: var(--color-primary);
   margin: 0;
   font-family: 'Georgia', 'Times New Roman', serif;
   letter-spacing: 0.01em;
@@ -389,7 +389,7 @@
 .hero-subtitle {
   font-size: 1.5rem;
   line-height: 1.6;
-  color: #1a1a1a;
+  color: var(--color-primary);
   max-width: 28rem;
   font-family: 'Montserrat', sans-serif;
   align-self: flex-start;

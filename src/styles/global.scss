@@ -1,6 +1,24 @@
 @use './reset';
 @use './variables' as *;
 
+// CSS Custom Properties for theming
+:root,
+[data-theme='dark'] {
+  --color-primary: #381932;  // Plum for dark mode
+  --color-text: #381932;
+  --color-accent: #381932;
+  --color-bg: #c6d2f4;       // Light blue background
+  --color-text-inverse: #ffffff; // White text for dark backgrounds
+}
+
+[data-theme='light'] {
+  --color-primary: #c6d2f4;  // Light blue for light mode
+  --color-text: #c6d2f4;
+  --color-accent: #c6d2f4;
+  --color-bg: #381932;       // Plum background
+  --color-text-inverse: #ffffff; // White text for dark backgrounds
+}
+
 // Global utility classes
 .text-balance {
   text-wrap: balance;

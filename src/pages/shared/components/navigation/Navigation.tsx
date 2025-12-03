@@ -7,9 +7,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
+import { useTheme } from '@/contexts/ThemeContext'
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -64,8 +66,16 @@ export default function Navigation() {
           </NavigationMenu>
 
           <div className="theme-toggles">
-            <button className="theme-btn theme-btn-dark" aria-label="Dark theme" />
-            <button className="theme-btn theme-btn-light" aria-label="Light theme" />
+            <button 
+              className={`theme-btn theme-btn-dark ${theme === 'dark' ? 'active' : ''}`}
+              onClick={toggleTheme}
+              aria-label="Dark theme" 
+            />
+            <button 
+              className={`theme-btn theme-btn-light ${theme === 'light' ? 'active' : ''}`}
+              onClick={toggleTheme}
+              aria-label="Light theme" 
+            />
           </div>
         </div>
       </div>

@@ -1,9 +1,16 @@
-// Color palette
+// Color palette - Default (Dark mode - Plum)
+// Light mode (Blue) colors will be set via CSS custom properties
 $color-primary: #0d3b2e;
 $color-bg: #c6d2f4;
 $color-text: #0d3b2e;
 $color-hover: rgba(13, 59, 46, 0.04);
 $color-accent: #381932;
+
+// Theme colors
+$color-dark-primary: #381932;  // Plum - Dark mode
+$color-light-primary: #c6d2f4; // Light blue - Light mode
+$color-dark-bg: #c6d2f4;       // Light blue background
+$color-light-bg: #381932;      // Plum background for light mode
 
 // Typography
 $font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

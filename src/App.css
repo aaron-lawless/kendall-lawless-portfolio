@@ -1,4 +1,7 @@
 #root {
   background-color: #c6d2f4;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
 }

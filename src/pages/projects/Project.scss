@@ -1,28 +1,6 @@
 .project-page {
-  padding: 0 10rem;
+  padding: 0 clamp(1.5rem, 6vw, 10rem);
   min-height: 100vh;
-}
-
-@media (max-width: 1400px) {
-  .project-page {
-    padding: 0 6rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .project-page {
-    padding: 0 4rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-page {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-page {
-    padding: 0 1.5rem;
-  }
+  overflow-x: hidden;
+  max-width: 100%;
 }

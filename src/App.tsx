@@ -6,6 +6,7 @@ import Projects from './pages/projects/Projects'
 import { Project } from './pages/projects/Project'
 import { Contact } from './pages/contact/Contact'
 import { ThemeProvider } from './contexts/ThemeContext'
+import About from './pages/about/About'
 
 function App() {
   useSmoothScroll({ delay: 500, pace: 0.3 });
@@ -18,6 +19,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:projectId" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

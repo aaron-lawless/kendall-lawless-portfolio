@@ -53,11 +53,6 @@ export default function Navigation() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="nav-link" href="process" onClick={closeMobileMenu}>
-                  PROCESS
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
                 <NavigationMenuLink className="nav-link" href="contact" onClick={closeMobileMenu}>
                   CONTACT
                 </NavigationMenuLink>

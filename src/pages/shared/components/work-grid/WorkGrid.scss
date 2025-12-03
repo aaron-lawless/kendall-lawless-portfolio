@@ -107,9 +107,10 @@
 
 .work-item {
   display: grid;
-  grid-template-columns: minmax(0, 300px) 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 320px) 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   padding: 3rem 0;
+  align-items: start;
 
   &:first-child {
     padding-top: 0;
@@ -119,24 +120,22 @@
 @media (max-width: 1024px) {
   .work-item {
     grid-template-columns: minmax(0, 280px) 1fr;
-    gap: 1.75rem;
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 768px) {
   .work-item {
-    grid-template-columns: minmax(0, 250px) 1fr;
-    gap: 1.5rem;
+    grid-template-columns: minmax(0, 240px) 1fr;
     padding: 2rem 0;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .work-item {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    padding: 1.5rem 0;
+    padding: 1.75rem 0;
   }
 }
 
@@ -144,27 +143,13 @@
   display: flex;
   flex-direction: column;
   justify-content: baseline;
-  gap: 1.25rem;
+  gap: clamp(0.875rem, 2vw, 1.25rem);
   width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .work-item-content {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .work-item-content {
     gap: 1rem;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .work-item-content {
-    gap: 0.875rem;
-    width: 100%;
   }
 }
 
@@ -253,16 +238,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
     font-weight: 500;
     color: #1a1a1a;
-    background-color: #c6d2f4;
-    padding: 1rem 2rem;
+    background-color: rgba(198, 210, 244, 0.95);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
     border-radius: 2rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 10;
+    white-space: nowrap;
   }
 
   &:hover::after {
@@ -283,23 +269,13 @@
 
 @media (max-width: 768px) {
   .work-item-image {
-    aspect-ratio: 3 / 2;
-    
-    &::after {
-      font-size: 1.25rem;
-      padding: 0.875rem 1.75rem;
-    }
+    aspect-ratio: 16 / 10;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .work-item-image {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     border-radius: 3px;
-
-    &::after {
-      font-size: 1.125rem;
-      padding: 0.75rem 1.5rem;
-    }
   }
 }

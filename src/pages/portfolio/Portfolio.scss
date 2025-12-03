@@ -1,29 +1,6 @@
 .portfolio-page {
-  padding: 0 3rem;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-@media (max-width: 1400px) {
-  .portfolio-page {
-    padding: 0 3rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .portfolio-page {
-    padding: 0 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio-page {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-page {
-    padding: 0 1.5rem;
-  }
+  max-width: 100%;
 }

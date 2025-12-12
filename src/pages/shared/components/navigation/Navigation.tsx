@@ -4,7 +4,6 @@ import { useState } from 'react'
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { useTheme } from '@/contexts/ThemeContext'

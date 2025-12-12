@@ -43,19 +43,19 @@ export default function Navigation() {
           <NavigationMenu>
             <NavigationMenuList className="nav-menu-list">
               <NavigationMenuItem>
-                <NavigationMenuLink className="nav-link" href="projects" onClick={closeMobileMenu}>
+                <Link to="/projects" className="nav-link" onClick={closeMobileMenu}>
                   WORK
-                </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="nav-link" href="about" onClick={closeMobileMenu}>
+                <Link to="/about" className="nav-link" onClick={closeMobileMenu}>
                   ABOUT
-                </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="nav-link" href="contact" onClick={closeMobileMenu}>
+                <Link to="/contact" className="nav-link" onClick={closeMobileMenu}>
                   CONTACT
-                </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

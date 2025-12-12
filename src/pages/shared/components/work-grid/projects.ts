@@ -50,9 +50,10 @@ export const projects: Project[] = [
     subtitle: 'FRESH BRAND IDENTITY FOR TAMPA CUSTOM HOME BUILDER.',
     tags: ['Brand', 'Print'],
     images: [
-      'https://images.unsplash.com/photo-1618556450994-a6a128ef0d9d?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=600&fit=crop',
+      img1,
+      img2,
+      img3,
+      img4,
     ]
   }
 ]
